@@ -1,0 +1,10 @@
+PROGRAM_NAME = tarea1
+
+all:
+	gcc -o $(PROGRAM_NAME) src/*.c -std=gnu11 -Wall -Wextra -O2 -Isrc/
+
+debug:
+	gcc -o $(PROGRAM_NAME) src/*.c -std=gnu11 -Wall -Wextra -Og -g -Isrc/
+
+clean:
+	rm -f $(PROGRAM_NAME) *.o hash_*.txt
